@@ -1,0 +1,88 @@
+      <section class="login-block">
+        <div class="pcoded-content">
+          <!-- Container-fluid starts -->
+          <div class="container ">
+              <div class="row ">
+                  <div class="col-sm-12 ">
+                      <!-- Authentication card start -->
+  
+                      <form class="form-horizontal" action="/admin/add-category" method="post">
+                        <fieldset>
+                                                           
+                        <!-- Form Name -->
+                        <legend> ADD CATEGORY</legend>
+
+                        <div class="form-group">
+                          <label class="col-md-4 control-label" for="product_id">Category Name</label>  
+                          <div class="col-md-4">
+                          <input id="product_id" name="category" placeholder="Category Name" class="form-control input-md" required="" type="text">
+                            
+                          </div>
+                        </div>                                   
+                                              
+                        
+                       
+                        <!-- Button -->
+                        <div class="form-group">
+                          
+                          <div class="col-md-4">
+                            <button id="singlebutton" type="submit" name="singlebutton" class="btn btn-primary">Add</button>
+                          </div>
+                          </div>
+                        
+                        </fieldset>
+                        </form>
+                        
+                          <!-- end of form -->
+                  </div>
+                  <!-- end of col-sm-12 -->
+              </div>
+              <!-- end of row -->
+          </div>
+          </div>
+          <!-- end of container-fluid -->
+      </section>
+      <section class="login-block">
+        <div class="pcoded-content">
+          <!-- Container-fluid starts -->
+          <div class="container ">
+              <div class="row ">
+                  <div class="col-sm-12 ">
+        
+        <table class="table">
+  <thead>
+    <tr>
+      <th scope="col">no</th>
+      <th scope="col">category</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each category}}
+    <tr>
+      <th scope="row">1</th>
+     
+      <td>{{this.category}}</td>
+     
+      <td>
+         <a href="/admin/edit-Category/{{this._id}}" class="btn btn-primary"> edit</a>
+        <a href="/admin/delete-Category/{{this._id}}" class="btn btn-danger" onclick="return confirm('press OK to delete this item {{this.category}}')">delete</a>
+      </td> 
+        
+    </tr>                        
+    {{/each}}
+  </tbody>
+</table>
+                  </div>
+              </div>
+          </div>
+        </div>
+</section>
+     
+
+
+
+
+
+
+  
+
